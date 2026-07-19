@@ -130,7 +130,7 @@ const Template = (() => {
           imzaCell,
           Personel.excelIcinKisalt(gunVerisi.personel, formTanimi.ad_soyad_kisaltma_siniri),
           { ...(formTanimi.personel_imza_font || { name: "Times New Roman", size: 8 }) },
-          { horizontal: "center", vertical: "middle", textRotation: 90, wrapText: false }
+          { horizontal: "center", vertical: "middle", textRotation: 90, wrapText: true }
         );
       }
     }
@@ -207,7 +207,12 @@ const Template = (() => {
           cell.value = deger;
           cell.alignment = { horizontal: "center", vertical: "middle" };
         } else if (alan.tip === "personel") {
-          hucreKlonlaVeYaz(cell, deger, { name: "Arial", size: 10 }, { horizontal: "center", vertical: "middle", wrapText: true });
+          hucreKlonlaVeYaz(
+            cell,
+            Personel.excelIcinKisalt(deger, formTanimi.ad_soyad_kisaltma_siniri),
+            { ...(formTanimi.personel_imza_font || { name: "Arial", size: 10 }) },
+            { horizontal: "center", vertical: "middle", wrapText: false }
+          );
         } else {
           hucreKlonlaVeYaz(cell, deger, undefined, { horizontal: "left", vertical: "middle", wrapText: true });
         }
