@@ -84,10 +84,18 @@ const Template = (() => {
 
     await logoEkle(wb, ws, formTanimi);
 
-    if (formTanimi.personel_imza_satiri && formTanimi.personel_satir_yuksekligi) {
-      ws.getRow(formTanimi.personel_imza_satiri).height = formTanimi.personel_satir_yuksekligi;
-      ws.getRow(formTanimi.personel_imza_satiri + 1).height = formTanimi.personel_satir_yuksekligi;
-      ws.getRow(formTanimi.personel_imza_satiri + 2).height = formTanimi.personel_satir_yuksekligi;
+    if (formTanimi.personel_imza_satiri) {
+      // Satır yüksekliği HER ZAMAN açıkça sabitlenir (customHeight=true).
+      // Aksi halde Excel, döndürülmüş (90°) imza metninin uzunluğuna göre
+      // satır yüksekliğini kendiliğinden büyütüyor — form tanımında özel
+      // bir yükseklik verilmemişse şablonun kendi mevcut yüksekliği (veya
+      // sayfanın varsayılan satır yüksekliği) aynen korunarak kullanılır.
+      const mevcutYukseklik = ws.getRow(formTanimi.personel_imza_satiri).height;
+      const sabitYukseklik =
+        formTanimi.personel_satir_yuksekligi || mevcutYukseklik || ws.properties.defaultRowHeight || 13.8;
+      ws.getRow(formTanimi.personel_imza_satiri).height = sabitYukseklik;
+      ws.getRow(formTanimi.personel_imza_satiri + 1).height = sabitYukseklik;
+      ws.getRow(formTanimi.personel_imza_satiri + 2).height = sabitYukseklik;
     }
 
     if (formTanimi.baslik_hucresi) {
