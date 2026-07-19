@@ -1,0 +1,29 @@
+{
+  "oda_no": "A-Z01",
+  "form_id": "bakim-kontrol",
+  "ad_soyad": "Hasan Ceylan",
+  "yil": 2026,
+  "ay": 7,
+  "gunler": {
+    "19": {
+      "maddeler": {
+        "1": "E",
+        "2": "E",
+        "3": "E",
+        "4": "E",
+        "5": "E",
+        "6": "E",
+        "7": "E",
+        "8": "E",
+        "9": "E",
+        "10": "E",
+        "11": "E",
+        "12": "E",
+        "13": "E"
+      },
+      "personel": "Ahmet ANDİÇ"
+    }
+  },
+  "son_guncelleme": "2026-07-19T06:03:13.187Z",
+  "guncelleyen": "Ahmet ANDİÇ"
+}
