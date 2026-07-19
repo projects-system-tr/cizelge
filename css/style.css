@@ -564,7 +564,7 @@ textarea.degerlendirme-alani {
 .nav-acilir-buton {
   background: none;
   border: none;
-  color: #000000;
+  color: #eaf3ee;
   font-size: 14px;
   cursor: pointer;
   padding: 0;
@@ -593,7 +593,7 @@ textarea.degerlendirme-alani {
   display: block;
   padding: 9px 12px;
   border-radius: 7px;
-  color: var(--metin);
+  color: #000000;
   text-decoration: none;
   font-size: 13.5px;
 }
