@@ -2,6 +2,9 @@
   "A-Z01": [
     "bakim-kontrol",
     "banyo-takip",
-    "gunluk-kisisel-bakim"
+    "gunluk-kisisel-bakim",
+    "pozisyon-takip",
+    "oda-kontrol",
+    "bez-degisim"
   ]
 }
