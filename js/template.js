@@ -77,17 +77,18 @@ const Template = (() => {
   }
 
   /**
-   * İmza hücresi için KESİN uzunluk garantisi. Personel.excelIcinKisalt yalnızca
+   * İmza hücresi için uzunluk garantisi. Personel.excelIcinKisalt yalnızca
    * ad/soyadı AYRI AYRI kısaltır; Türkçe isimlerde ad veya soyad tek başına
-   * sınırı (varsayılan 7) aşmadığı sürece hiç kısaltılmadan tam yazılabilir,
-   * bu da imza satırının isim uzunluğuna göre büyümesine yol açar (özellikle
-   * döndürülmüş/rotated metinlerde bazı görüntüleyiciler satır yüksekliğini
-   * karakter sayısına göre yeniden hesaplar). Bu yüzden kısaltmadan SONRA
-   * toplam uzunluk da mutlak bir üst sınıra göre kesin olarak kırpılır.
+   * sınırı (varsayılan 7) aşmadığı sürece hiç kısaltılmadan tam yazılabilir.
+   * Bu yüzden kısaltmadan SONRA toplam uzunluk da mutlak bir üst sınıra göre
+   * kesin olarak kırpılır. Hücre artık tek (birleştirilmemiş) ve sabit
+   * yükseklikte olduğundan, kısaltmadan sonra kalan ufak taşmalar da ayrıca
+   * `shrinkToFit` ile (yazı tipi küçültülerek) telafi edilir — satır/hücre
+   * boyutu hiçbir durumda değişmez.
    */
   function imzaMetniUret(adSoyad, formTanimi) {
     const kisaltilmis = Personel.excelIcinKisalt(adSoyad, formTanimi.ad_soyad_kisaltma_siniri);
-    const maksimum = formTanimi.imza_maksimum_karakter || 8;
+    const maksimum = formTanimi.imza_maksimum_karakter || 9;
     return kisaltilmis.length > maksimum ? kisaltilmis.slice(0, maksimum) : kisaltilmis;
   }
 
@@ -103,12 +104,13 @@ const Template = (() => {
       // satır yüksekliğini kendiliğinden büyütüyor — form tanımında özel
       // bir yükseklik verilmemişse şablonun kendi mevcut yüksekliği (veya
       // sayfanın varsayılan satır yüksekliği) aynen korunarak kullanılır.
+      // NOT: imza artık TEK bir hücrede (birleştirilmemiş) tutulduğu için
+      // yalnızca bu tek satırın yüksekliği sabitlenir; komşu satırlara
+      // (artık farklı içerikler barındırdıkları için) dokunulmaz.
       const mevcutYukseklik = ws.getRow(formTanimi.personel_imza_satiri).height;
       const sabitYukseklik =
         formTanimi.personel_satir_yuksekligi || mevcutYukseklik || ws.properties.defaultRowHeight || 13.8;
       ws.getRow(formTanimi.personel_imza_satiri).height = sabitYukseklik;
-      ws.getRow(formTanimi.personel_imza_satiri + 1).height = sabitYukseklik;
-      ws.getRow(formTanimi.personel_imza_satiri + 2).height = sabitYukseklik;
     }
 
     if (formTanimi.baslik_hucresi) {
@@ -151,7 +153,7 @@ const Template = (() => {
           imzaCell,
           imzaMetniUret(gunVerisi.personel, formTanimi),
           { ...(formTanimi.personel_imza_font || { name: "Times New Roman", size: 8 }) },
-          { horizontal: "center", vertical: "middle", textRotation: 90, wrapText: false }
+          { horizontal: "center", vertical: "middle", textRotation: 90, wrapText: false, shrinkToFit: true }
         );
       }
     }
