@@ -130,7 +130,7 @@ const Template = (() => {
           imzaCell,
           Personel.excelIcinKisalt(gunVerisi.personel, formTanimi.ad_soyad_kisaltma_siniri),
           { ...(formTanimi.personel_imza_font || { name: "Times New Roman", size: 8 }) },
-          { horizontal: "center", vertical: "middle", textRotation: 90, wrapText: true }
+          { horizontal: "center", vertical: "middle", textRotation: 90, wrapText: false }
         );
       }
     }
