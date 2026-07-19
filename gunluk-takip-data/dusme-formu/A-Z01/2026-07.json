@@ -4,26 +4,7 @@
   "ad_soyad": "Hasan Ceylan",
   "yil": 2026,
   "ay": 7,
-  "olaylar": [
-    {
-      "id": "olay_1784456055510_ovlwe",
-      "tarih": "19.07.2026",
-      "saat": "10:00",
-      "yer": "Oda",
-      "neden": "Oda",
-      "kronik_hastalik": "Oda",
-      "engel_durumu": "Oda",
-      "ilaclar": "Oda",
-      "vitaller": "Oda",
-      "saglik_personeli": "Oda",
-      "notlar": "Oda",
-      "adi_soyadi": "Hasan Ceylan",
-      "blok_birim": "A-Z01",
-      "bakim_personeli": "Ahmet ANDİÇ",
-      "olusturan": "Ahmet ANDİÇ",
-      "olusturma_tarihi": "2026-07-19T10:14:15.511Z"
-    }
-  ],
-  "son_guncelleme": "2026-07-19T10:14:15.511Z",
+  "olaylar": [],
+  "son_guncelleme": "2026-07-19T10:15:01.791Z",
   "guncelleyen": "Ahmet ANDİÇ"
 }
