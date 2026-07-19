@@ -1,0 +1,25 @@
+{
+  "oda_no": "A-Z01",
+  "form_id": "pozisyon-takip",
+  "ad_soyad": "Hasan Ceylan",
+  "yil": 2026,
+  "ay": 7,
+  "gunler": {
+    "19": {
+      "alanlar": {
+        "pos_2300": "E",
+        "pos_2100": "E",
+        "pos_1700": "E",
+        "pos_1500": "E",
+        "pos_1900": "E",
+        "pos_1300": "E",
+        "pos_1100": "E",
+        "pos_0900": "E",
+        "uygulayan": "Ahmet ANDİÇ"
+      },
+      "personel": "Ahmet ANDİÇ"
+    }
+  },
+  "son_guncelleme": "2026-07-19T06:03:17.148Z",
+  "guncelleyen": "Ahmet ANDİÇ"
+}
