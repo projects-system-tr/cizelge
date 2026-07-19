@@ -77,19 +77,47 @@ const Template = (() => {
   }
 
   /**
-   * İmza hücresi için uzunluk garantisi. Personel.excelIcinKisalt yalnızca
-   * ad/soyadı AYRI AYRI kısaltır; Türkçe isimlerde ad veya soyad tek başına
-   * sınırı (varsayılan 7) aşmadığı sürece hiç kısaltılmadan tam yazılabilir.
-   * Bu yüzden kısaltmadan SONRA toplam uzunluk da mutlak bir üst sınıra göre
-   * kesin olarak kırpılır. Hücre artık tek (birleştirilmemiş) ve sabit
-   * yükseklikte olduğundan, kısaltmadan sonra kalan ufak taşmalar da ayrıca
-   * `shrinkToFit` ile (yazı tipi küçültülerek) telafi edilir — satır/hücre
-   * boyutu hiçbir durumda değişmez.
+   * İmza hücresi için sıralı kısaltma stratejisi. Hücre artık tek, sabit
+   * yükseklikte ve metin kaydırma (wrapText) açık olduğundan, önce tam ismin
+   * sığıp sığmadığına bakılır; sığmazsa aşağıdaki öncelik sırasıyla kısaltılır:
+   *
+   *   1) Tam ad + tam soyad                    → "Ahmet ANDİÇ"
+   *   2) Sığmıyorsa: tam ad + soyad baş harfi   → "Ahmet A."
+   *   3) Ad kendisi uzunsa: ad baş harfi + tam soyad → "A. ANDİÇ"
+   *   4) Birden fazla ad varsa: her adın baş harfi (araya boşluk koymadan)
+   *      + tam soyad                            → "A.A ANDİÇ"
+   *
+   * Kalan ufak taşmalar hücrenin kendi wrapText özelliğiyle (aynı hücre
+   * içinde alt alta) telafi edilir; hücre/satır boyutu hiçbir durumda
+   * değişmez.
    */
   function imzaMetniUret(adSoyad, formTanimi) {
-    const kisaltilmis = Personel.excelIcinKisalt(adSoyad, formTanimi.ad_soyad_kisaltma_siniri);
-    const maksimum = formTanimi.imza_maksimum_karakter || 9;
-    return kisaltilmis.length > maksimum ? kisaltilmis.slice(0, maksimum) : kisaltilmis;
+    const temiz = (adSoyad || "").trim().replace(/\s+/g, " ");
+    if (!temiz) return "";
+
+    const parcalar = temiz.split(" ");
+    if (parcalar.length < 2) return temiz; // tek kelimelik isim, olduğu gibi bırak
+
+    const soyad = parcalar[parcalar.length - 1];
+    const adParcalari = parcalar.slice(0, -1);
+    const maksimum = formTanimi.imza_maksimum_karakter || 12;
+
+    // Birden fazla ad varsa doğrudan baş harflere geç (örn. "Ahmet Ali ANDİÇ" -> "A.A ANDİÇ")
+    if (adParcalari.length > 1) {
+      const baslar = adParcalari.map((p) => p.charAt(0).toLocaleUpperCase("tr")).join(".");
+      return `${baslar} ${soyad}`;
+    }
+
+    const ad = adParcalari[0];
+
+    const tamHal = `${ad} ${soyad}`;
+    if (tamHal.length <= maksimum) return tamHal;
+
+    const soyadKisaHal = `${ad} ${soyad.charAt(0).toLocaleUpperCase("tr")}.`;
+    if (soyadKisaHal.length <= maksimum) return soyadKisaHal;
+
+    // Ad kendisi uzun: adı kısalt, soyadı tam bırak
+    return `${ad.charAt(0).toLocaleUpperCase("tr")}. ${soyad}`;
   }
 
 
@@ -153,7 +181,7 @@ const Template = (() => {
           imzaCell,
           imzaMetniUret(gunVerisi.personel, formTanimi),
           { ...(formTanimi.personel_imza_font || { name: "Times New Roman", size: 8 }) },
-          { horizontal: "center", vertical: "middle", textRotation: 90, wrapText: false, shrinkToFit: true }
+          { horizontal: "center", vertical: "middle", textRotation: 90, wrapText: true }
         );
       }
     }
