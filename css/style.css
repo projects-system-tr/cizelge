@@ -593,7 +593,7 @@ textarea.degerlendirme-alani {
   display: block;
   padding: 9px 12px;
   border-radius: 7px;
-  color: #000000;
+  color: #000000 !important;
   text-decoration: none;
   font-size: 13.5px;
 }
