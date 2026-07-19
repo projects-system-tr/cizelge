@@ -1,0 +1,23 @@
+{
+  "oda_no": "A-Z01",
+  "form_id": "gunluk-kisisel-bakim",
+  "ad_soyad": "Hasan Ceylan",
+  "yil": 2026,
+  "ay": 7,
+  "gunler": {
+    "19": {
+      "alanlar": {
+        "diger": "E",
+        "tirnak_kesimi": "E",
+        "tiras": "E",
+        "kiyafet_degisimi": "E",
+        "el_yuz_yikama": "E",
+        "saat": "10:00",
+        "uygulayan": "Ahmet ANDİÇ"
+      },
+      "personel": "Ahmet ANDİÇ"
+    }
+  },
+  "son_guncelleme": "2026-07-19T06:03:15.758Z",
+  "guncelleyen": "Ahmet ANDİÇ"
+}
