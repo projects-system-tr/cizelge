@@ -6,5 +6,9 @@
     "pozisyon-takip",
     "oda-kontrol",
     "bez-degisim"
+  ],
+  "A-Z03": [
+    "bakim-kontrol",
+    "banyo-takip"
   ]
 }
