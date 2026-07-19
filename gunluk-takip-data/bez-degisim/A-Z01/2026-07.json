@@ -1,0 +1,40 @@
+{
+  "oda_no": "A-Z01",
+  "form_id": "bez-degisim",
+  "ad_soyad": "Hasan Ceylan",
+  "yil": 2026,
+  "ay": 7,
+  "gunler": {
+    "19": {
+      "alanlar": {
+        "s08": "E",
+        "s09": "E",
+        "s10": "E",
+        "s11": "E",
+        "s12": "E",
+        "s13": "E",
+        "s14": "E",
+        "s15": "E",
+        "s16": "E",
+        "s17": "E",
+        "s18": "E",
+        "s19": "E",
+        "s20": "E",
+        "s21": "E",
+        "s22": "E",
+        "s23": "E",
+        "s00": "E",
+        "s01": "E",
+        "s02": "E",
+        "s03": "E",
+        "s04": "E",
+        "s05": "E",
+        "s06": "E",
+        "s07": "E"
+      },
+      "personel": "Ahmet ANDİÇ"
+    }
+  },
+  "son_guncelleme": "2026-07-19T06:03:19.845Z",
+  "guncelleyen": "Ahmet ANDİÇ"
+}
