@@ -13,10 +13,10 @@
  */
 window.APP_CONFIG = {
   // GitHub kullanıcı adınız / organizasyon adınız
-  GITHUB_OWNER: "KULLANICI_ADINIZ",
+  GITHUB_OWNER: "projects-system-tr",
 
   // Depo adı (örn. "huzurevi-sistemi")
-  GITHUB_REPO: "DEPO_ADINIZ",
+  GITHUB_REPO: "cizelge",
 
   // Verilerin ve raporların yazılacağı/okunacağı branch
   GITHUB_BRANCH: "main",
