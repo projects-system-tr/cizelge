@@ -76,9 +76,22 @@ const Template = (() => {
     if (alignment) cell.alignment = alignment;
   }
 
-  // ---------------------------------------------------------------------
-  // TİP 1: grid-gun-sutun (maddeler satır, günler sütun)
-  // ---------------------------------------------------------------------
+  /**
+   * İmza hücresi için KESİN uzunluk garantisi. Personel.excelIcinKisalt yalnızca
+   * ad/soyadı AYRI AYRI kısaltır; Türkçe isimlerde ad veya soyad tek başına
+   * sınırı (varsayılan 7) aşmadığı sürece hiç kısaltılmadan tam yazılabilir,
+   * bu da imza satırının isim uzunluğuna göre büyümesine yol açar (özellikle
+   * döndürülmüş/rotated metinlerde bazı görüntüleyiciler satır yüksekliğini
+   * karakter sayısına göre yeniden hesaplar). Bu yüzden kısaltmadan SONRA
+   * toplam uzunluk da mutlak bir üst sınıra göre kesin olarak kırpılır.
+   */
+  function imzaMetniUret(adSoyad, formTanimi) {
+    const kisaltilmis = Personel.excelIcinKisalt(adSoyad, formTanimi.ad_soyad_kisaltma_siniri);
+    const maksimum = formTanimi.imza_maksimum_karakter || 8;
+    return kisaltilmis.length > maksimum ? kisaltilmis.slice(0, maksimum) : kisaltilmis;
+  }
+
+
   async function buildGridGunSutun(wb, ws, kayit, formTanimi) {
     const maddeler = await getMaddeLabels(formTanimi);
 
@@ -136,7 +149,7 @@ const Template = (() => {
         const imzaCell = ws.getCell(formTanimi.personel_imza_satiri, col);
         hucreKlonlaVeYaz(
           imzaCell,
-          Personel.excelIcinKisalt(gunVerisi.personel, formTanimi.ad_soyad_kisaltma_siniri),
+          imzaMetniUret(gunVerisi.personel, formTanimi),
           { ...(formTanimi.personel_imza_font || { name: "Times New Roman", size: 8 }) },
           { horizontal: "center", vertical: "middle", textRotation: 90, wrapText: false }
         );
