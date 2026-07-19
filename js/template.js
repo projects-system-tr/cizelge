@@ -62,16 +62,11 @@ const Template = (() => {
   }
 
   async function logoEkle(wb, ws, formTanimi) {
-    if (!formTanimi.logo_hucre_araligi) return;
-    try {
-      const logoBuf = await fetchLogoBuffer();
-      const imageId = wb.addImage({ buffer: logoBuf, extension: "png" });
-      const ilkHucre = `${String.fromCharCode(65 + formTanimi.logo_hucre_araligi.tl.col)}${formTanimi.logo_hucre_araligi.tl.row + 1}`;
-      ws.getCell(ilkHucre).value = null;
-      ws.addImage(imageId, formTanimi.logo_hucre_araligi);
-    } catch (err) {
-      console.warn("Logo eklenemedi:", err.message);
-    }
+    // Logo ekleme devre dışı bırakıldı: Excel çıktısı üretilirken şablondaki
+    // mevcut logoya (ve o hücreye) hiç dokunulmasın diye bu fonksiyon artık
+    // hiçbir şey yapmıyor. Tekrar aktif etmek isterseniz aşağıdaki eski
+    // gövdeyi geri getirip formTanimi.logo_hucre_araligi tanımlarını kullanın.
+    return;
   }
 
   function hucreKlonlaVeYaz(cell, deger, font, alignment) {
