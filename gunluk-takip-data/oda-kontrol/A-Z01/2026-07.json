@@ -1,0 +1,28 @@
+{
+  "oda_no": "A-Z01",
+  "form_id": "oda-kontrol",
+  "ad_soyad": "Hasan Ceylan",
+  "yil": 2026,
+  "ay": 7,
+  "gunler": {
+    "19": {
+      "alanlar": {
+        "s0400": "E",
+        "s0200": "E",
+        "s0000": "E",
+        "s2200": "E",
+        "s2000": "E",
+        "s1800": "E",
+        "s1600": "E",
+        "s1400": "E",
+        "s1200": "E",
+        "s1000": "E",
+        "s0800": "E",
+        "s0600": "E"
+      },
+      "personel": "Ahmet ANDİÇ"
+    }
+  },
+  "son_guncelleme": "2026-07-19T06:03:18.484Z",
+  "guncelleyen": "Ahmet ANDİÇ"
+}
