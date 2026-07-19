@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Personel Yönetimi — Günlük Takip Sistemi</title>
+<link rel="icon" href="assets/favicon-32.png" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="ust-bar">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <img src="assets/logo.png" alt="" style="width:34px; height:34px; object-fit:contain;" />
+      <div>
+        <div class="baslik">Günlük Bakım Takip Sistemi</div>
+        <div class="alt-baslik">Personel yönetimi</div>
+      </div>
+    </div>
+    <nav>
+      <a href="odalar.html">Odalar</a>
+      <a href="dusme-takip.html">Düşme Takip</a>
+      <a href="rapor.html">Rapor Al</a>
+      <div class="nav-acilir">
+        <button type="button" class="nav-acilir-buton">Yönetim ▾</button>
+        <div class="nav-acilir-menu">
+          <div class="menu-baslik">Yönetim</div>
+          <a href="form-atamalari.html">Form Atamaları</a>
+          <a href="oda-bilgileri.html">Oda Bilgileri</a>
+          <a href="personel-yonetim.html">Personel Yönetimi</a>
+        </div>
+      </div>
+      <a href="#" id="cikisLink">Çıkış Yap</a>
+    </nav>
+  </div>
+
+  <div class="sayfa" style="max-width:640px;">
+    <div class="kart">
+      <h2 style="margin:0 0 4px; font-size:16px;">Personel Ekle</h2>
+      <p style="color:var(--metin-soluk); font-size:13.5px; margin:0 0 16px;">
+        Eklenen personel, tüm cihazlarda "Personel Seç" ekranında görünür.
+      </p>
+      <div id="hataMesaji" class="hata-mesaji"></div>
+      <div style="display:flex; gap:8px; margin-bottom:22px;">
+        <input type="text" id="yeniPersonelAdi" placeholder="Ad Soyad" style="flex:1; padding:10px 12px; border:1px solid var(--kenar); border-radius:8px; font-size:14px;" />
+        <button class="buton birincil" id="yeniEkleBtn">Ekle</button>
+      </div>
+
+      <h2 style="margin:0 0 12px; font-size:16px;">Mevcut Personel</h2>
+      <div id="personelListesi" class="personel-listesi"></div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/personel.js"></script>
+  <script>
+    document.getElementById("cikisLink").addEventListener("click", (e) => { e.preventDefault(); Auth.logout(); });
+  </script>
+  <script src="js/personel-yonetim-page.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Günlük Takip</title>
+<link rel="icon" href="assets/favicon-32.png" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="ust-bar">
+    <div class="marka">
+      <img src="assets/logo.png" alt="" />
+      <div>
+        <div class="baslik">Günlük Bakım Takip Sistemi</div>
+        <div class="alt-baslik">Günlük madde işaretleme</div>
+      </div>
+    </div>
+    <nav>
+      <span class="rozet">👤 <span id="personelEtiket">—</span></span>
+      <a href="odalar.html">Odalar</a>
+      <a href="dusme-takip.html">Düşme Takip</a>
+      <a id="raporLink" href="#">Rapor Al</a>
+      <div class="nav-acilir">
+        <button type="button" class="nav-acilir-buton">Yönetim ▾</button>
+        <div class="nav-acilir-menu">
+          <div class="menu-baslik">Yönetim</div>
+          <a href="form-atamalari.html">Form Atamaları</a>
+          <a href="oda-bilgileri.html">Oda Bilgileri</a>
+          <a href="personel-yonetim.html">Personel Yönetimi</a>
+        </div>
+      </div>
+      <a href="personel-sec.html?donus=odalar.html">Personel Değiştir</a>
+      <a href="#" id="cikisLink">Çıkış Yap</a>
+    </nav>
+  </div>
+
+  <div class="sayfa" id="anaIcerik">
+    <div class="form-ust">
+      <div>
+        <h1 id="odaNoBaslik">—</h1>
+        <div class="sakin-adi" id="sakinAdiBaslik">—</div>
+      </div>
+      <div class="ay-secici">
+        <button id="oncekiAy" aria-label="Önceki ay">‹</button>
+        <span class="ay-etiket" id="ayEtiket">—</span>
+        <button id="sonrakiAy" aria-label="Sonraki ay">›</button>
+      </div>
+    </div>
+
+    <div class="ilerleme-cubugu"><div class="dolu" id="ilerlemeDolu" style="width:0%"></div></div>
+    <div class="ilerleme-metin" id="ilerlemeMetin">Yükleniyor…</div>
+
+    <div id="gunSecici" class="gun-secici"></div>
+
+    <h2 id="gunBaslik" style="margin:0 0 14px; font-size:16px;">Gün seçilmedi</h2>
+
+    <div id="formBolumleri">
+      <div class="bos-durum">Yukarıdan bir gün seçin.</div>
+    </div>
+
+    <div class="arac-satiri" style="align-items:center;">
+      <span class="durum-etiketi" id="durumEtiketi"></span>
+      <button class="buton birincil" id="tumunuKaydetBtn" disabled>Tümünü Kaydet</button>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/rooms.js"></script>
+  <script src="js/date-utils.js"></script>
+  <script src="js/personel.js"></script>
+  <script src="js/formlar.js"></script>
+  <script src="js/oda-form-atama.js"></script>
+  <script src="vendor/exceljs.min.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/data-store.js"></script>
+  <script>
+    const _params = new URLSearchParams(window.location.search);
+    document.getElementById("raporLink").href = "rapor.html?oda=" + encodeURIComponent(_params.get("oda") || "");
+    document.getElementById("cikisLink").addEventListener("click", (e) => { e.preventDefault(); Auth.logout(); });
+  </script>
+  <script src="js/takip-page.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

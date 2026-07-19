@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Giriş — Günlük Takip Sistemi</title>
+<link rel="icon" href="assets/favicon-32.png" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="giris-sarmalayici">
+    <div class="giris-kart">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+        <img src="assets/logo.png" alt="" style="width:42px; height:42px; object-fit:contain;" />
+        <h1 style="margin:0;">Günlük Bakım Takip Sistemi</h1>
+      </div>
+      <p class="aciklama">Sivas Huzurevi Yaşlı Bakım ve Rehabilitasyon Merkezi — 31 günlük madde takip formu</p>
+
+      <div id="hataMesaji" class="hata-mesaji"></div>
+
+      <form id="girisForm">
+        <div class="alan">
+          <label for="patAlani">GitHub Erişim Anahtarı (PAT)</label>
+          <input type="password" id="patAlani" autocomplete="off" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" required />
+        </div>
+        <button type="submit" class="buton birincil" id="girisButonu" style="width:100%; justify-content:center; padding:11px 0;">
+          Giriş Yap
+        </button>
+      </form>
+      <p style="margin-top:16px; font-size:12px; color:var(--metin-soluk);">
+        Erişim anahtarınızı yalnızca sizde saklı olan admin panelinden alabilirsiniz. Anahtar tarayıcı sekmesi kapanınca silinir, sunucuda tutulmaz.
+      </p>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/github-api.js"></script>
+  <script>
+    const form = document.getElementById("girisForm");
+    const hataKutusu = document.getElementById("hataMesaji");
+    const buton = document.getElementById("girisButonu");
+
+    // Zaten girişliyse doğrudan devam et
+    if (Auth.isLoggedIn()) {
+      window.location.href = Auth.getPersonel() ? "odalar.html" : "personel-sec.html";
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      hataKutusu.classList.remove("gorunur");
+      const pat = document.getElementById("patAlani").value.trim();
+      if (!pat) return;
+
+      buton.disabled = true;
+      buton.textContent = "Kontrol ediliyor…";
+      Auth.setToken(pat);
+
+      try {
+        const erisimVar = await GitHubAPI.testAccess();
+        if (!erisimVar) {
+          throw new Error("Anahtar geçersiz veya depoya erişim yok.");
+        }
+        window.location.href = "personel-sec.html";
+      } catch (err) {
+        Auth.clearToken();
+        hataKutusu.textContent = "Giriş başarısız: " + err.message;
+        hataKutusu.classList.add("gorunur");
+        buton.disabled = false;
+        buton.textContent = "Giriş Yap";
+      }
+    });
+  </script>
+</body>
+</html>

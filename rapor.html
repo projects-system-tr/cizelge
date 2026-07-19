@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rapor Al</title>
+<link rel="icon" href="assets/favicon-32.png" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="ust-bar">
+    <div class="marka">
+      <img src="assets/logo.png" alt="" />
+      <div>
+        <div class="baslik">Günlük Bakım Takip Sistemi</div>
+        <div class="alt-baslik">Rapor / çıktı al</div>
+      </div>
+    </div>
+    <nav>
+      <a href="odalar.html">Odalar</a>
+      <a href="dusme-takip.html">Düşme Takip</a>
+      <a href="rapor.html">Rapor Al</a>
+      <div class="nav-acilir">
+        <button type="button" class="nav-acilir-buton">Yönetim ▾</button>
+        <div class="nav-acilir-menu">
+          <div class="menu-baslik">Yönetim</div>
+          <a href="form-atamalari.html">Form Atamaları</a>
+          <a href="oda-bilgileri.html">Oda Bilgileri</a>
+          <a href="personel-yonetim.html">Personel Yönetimi</a>
+        </div>
+      </div>
+      <a href="#" id="cikisLink">Çıkış Yap</a>
+    </nav>
+  </div>
+
+  <div class="sayfa">
+    <div class="kart" style="margin-bottom:20px;">
+      <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:end;">
+        <div class="alan" style="flex:2; min-width:200px; margin-bottom:0;">
+          <label>Form</label>
+          <select id="formSecici"></select>
+        </div>
+        <div class="alan" style="flex:1; min-width:140px; margin-bottom:0;">
+          <label>Ay</label>
+          <select id="aySecici"></select>
+        </div>
+        <div class="alan" style="flex:1; min-width:100px; margin-bottom:0;">
+          <label>Yıl</label>
+          <select id="yilSecici"></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="kart">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+        <label style="display:flex; align-items:center; gap:8px; font-weight:600; font-size:14px; cursor:pointer;">
+          <input type="checkbox" id="tumunuSecKutu" style="width:16px; height:16px; accent-color:var(--ana);" />
+          Bu Form İçin Tüm Odaları Seç
+        </label>
+        <span id="secimSayaci" style="font-size:13px; color:var(--metin-soluk);">Henüz oda seçilmedi</span>
+      </div>
+      <p style="font-size:12.5px; color:var(--metin-soluk); margin-top:0;">
+        Yalnızca seçili form için aktifleştirilmiş odalar listelenir.
+      </p>
+      <div id="odaListesiAlani"></div>
+    </div>
+
+    <div class="arac-satiri" style="align-items:center; flex-direction:column; gap:8px;">
+      <div style="width:100%; display:flex; justify-content:flex-end; align-items:center; gap:14px;">
+        <span id="durumMetni" style="font-size:13px; color:var(--metin-soluk);"></span>
+        <button class="buton birincil" id="indirBtn" disabled>Excel Olarak İndir</button>
+      </div>
+      <div class="ilerleme-cubugu" style="width:100%;"><div class="dolu" id="ilerlemeAlani" style="width:0%;"></div></div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/rooms.js"></script>
+  <script src="js/date-utils.js"></script>
+  <script src="js/personel.js"></script>
+  <script src="js/formlar.js"></script>
+  <script src="js/oda-form-atama.js"></script>
+  <script src="vendor/exceljs.min.js"></script>
+  <script src="vendor/jszip.min.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/data-store.js"></script>
+  <script src="js/olay-kaydi-data-store.js"></script>
+  <script>
+    document.getElementById("cikisLink").addEventListener("click", (e) => { e.preventDefault(); Auth.logout(); });
+  </script>
+  <script src="js/rapor-page.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

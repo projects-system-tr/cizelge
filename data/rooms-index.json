@@ -1,0 +1,390 @@
+[
+  {
+    "oda_no": "A-101",
+    "ad_soyad": "Cihat Karakaş"
+  },
+  {
+    "oda_no": "A-102",
+    "ad_soyad": "Ali Ersoy"
+  },
+  {
+    "oda_no": "A-103",
+    "ad_soyad": "Mustafa Polat"
+  },
+  {
+    "oda_no": "A-104",
+    "ad_soyad": "Kenan Deveci"
+  },
+  {
+    "oda_no": "A-105",
+    "ad_soyad": "Ali Topçu"
+  },
+  {
+    "oda_no": "A-106",
+    "ad_soyad": "Şinasi Aycan"
+  },
+  {
+    "oda_no": "A-107",
+    "ad_soyad": "Sami Ermiş"
+  },
+  {
+    "oda_no": "A-108",
+    "ad_soyad": "Adem Eken"
+  },
+  {
+    "oda_no": "A-109",
+    "ad_soyad": "Bayram Kurt"
+  },
+  {
+    "oda_no": "A-110",
+    "ad_soyad": "Mehmet Emin Çakır"
+  },
+  {
+    "oda_no": "A-111",
+    "ad_soyad": "İsmail Gençer"
+  },
+  {
+    "oda_no": "A-112",
+    "ad_soyad": "Levent İşler"
+  },
+  {
+    "oda_no": "A-201",
+    "ad_soyad": "Yusuf Boyraz"
+  },
+  {
+    "oda_no": "A-202",
+    "ad_soyad": "İbrahim Arslan"
+  },
+  {
+    "oda_no": "A-203",
+    "ad_soyad": "Sirer Ağca"
+  },
+  {
+    "oda_no": "A-204",
+    "ad_soyad": "Arif Atabek"
+  },
+  {
+    "oda_no": "A-205",
+    "ad_soyad": "Bülent Olcar"
+  },
+  {
+    "oda_no": "A-206",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "A-207",
+    "ad_soyad": "Adıgüzel Türkdoğan"
+  },
+  {
+    "oda_no": "A-208",
+    "ad_soyad": "Duran Küçükfırat"
+  },
+  {
+    "oda_no": "A-209",
+    "ad_soyad": "Hüseyin Polat"
+  },
+  {
+    "oda_no": "A-210",
+    "ad_soyad": "Durdu Mehmet Şimşek"
+  },
+  {
+    "oda_no": "A-211",
+    "ad_soyad": "Ahmet Öztürk"
+  },
+  {
+    "oda_no": "A-212",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "A-Z01",
+    "ad_soyad": "Hasan Ceylan"
+  },
+  {
+    "oda_no": "A-Z02",
+    "ad_soyad": "Abdullah Ünnü"
+  },
+  {
+    "oda_no": "A-Z03",
+    "ad_soyad": "Hamza Balta"
+  },
+  {
+    "oda_no": "A-Z04",
+    "ad_soyad": "Hasan Hüseyin Acar"
+  },
+  {
+    "oda_no": "A-Z05",
+    "ad_soyad": "Necati Doğan"
+  },
+  {
+    "oda_no": "A-Z06",
+    "ad_soyad": "Hüseyin Güler"
+  },
+  {
+    "oda_no": "A-Z07",
+    "ad_soyad": "Eşref Kızılay"
+  },
+  {
+    "oda_no": "A-Z08",
+    "ad_soyad": "Hüseyin Oyman"
+  },
+  {
+    "oda_no": "A-Z09",
+    "ad_soyad": "Memet Tokuççu"
+  },
+  {
+    "oda_no": "A-Z10",
+    "ad_soyad": "Ömer Canatan"
+  },
+  {
+    "oda_no": "A-Z11",
+    "ad_soyad": "Ali Ekber Keleş"
+  },
+  {
+    "oda_no": "A-Z12",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "B-101",
+    "ad_soyad": "Suna Kömürcü"
+  },
+  {
+    "oda_no": "B-102",
+    "ad_soyad": "Ayşe Tüken"
+  },
+  {
+    "oda_no": "B-103",
+    "ad_soyad": "Zeynep Gürkan"
+  },
+  {
+    "oda_no": "B-104",
+    "ad_soyad": "Menekşe Şimşek"
+  },
+  {
+    "oda_no": "B-105",
+    "ad_soyad": "Menevşe Yüksel"
+  },
+  {
+    "oda_no": "B-106",
+    "ad_soyad": "Zübeyde Alagöz"
+  },
+  {
+    "oda_no": "B-107",
+    "ad_soyad": "Emine Demir"
+  },
+  {
+    "oda_no": "B-108",
+    "ad_soyad": "Nazire Koç"
+  },
+  {
+    "oda_no": "B-109",
+    "ad_soyad": "Hatice Gürbüz"
+  },
+  {
+    "oda_no": "B-110",
+    "ad_soyad": "Türkan Öztürk"
+  },
+  {
+    "oda_no": "B-111",
+    "ad_soyad": "Nazire Kaya"
+  },
+  {
+    "oda_no": "B-112",
+    "ad_soyad": "Kadriye Yumuk"
+  },
+  {
+    "oda_no": "B-201",
+    "ad_soyad": "Kıymet Pürlü"
+  },
+  {
+    "oda_no": "B-202",
+    "ad_soyad": "Şerife Dudu Tekeş"
+  },
+  {
+    "oda_no": "B-203",
+    "ad_soyad": "Fatma Budak"
+  },
+  {
+    "oda_no": "B-204",
+    "ad_soyad": "Meryem İsmihan"
+  },
+  {
+    "oda_no": "B-205",
+    "ad_soyad": "Rahime Özyürek"
+  },
+  {
+    "oda_no": "B-206",
+    "ad_soyad": "Emine Kutluca"
+  },
+  {
+    "oda_no": "B-207",
+    "ad_soyad": "Yüksel Göreceğiz"
+  },
+  {
+    "oda_no": "B-207-1",
+    "ad_soyad": "Adem Göreceğiz"
+  },
+  {
+    "oda_no": "B-208",
+    "ad_soyad": "Hatice Ertaş"
+  },
+  {
+    "oda_no": "B-209",
+    "ad_soyad": "Feride Başara"
+  },
+  {
+    "oda_no": "B-210",
+    "ad_soyad": "Naime Dalak"
+  },
+  {
+    "oda_no": "B-211",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "B-212",
+    "ad_soyad": "Nafiye Yıldırım"
+  },
+  {
+    "oda_no": "C-101",
+    "ad_soyad": "Hacı Mustafa Yiğit"
+  },
+  {
+    "oda_no": "C-102",
+    "ad_soyad": "Duran Aydın"
+  },
+  {
+    "oda_no": "C-103",
+    "ad_soyad": "Muharrem Kara"
+  },
+  {
+    "oda_no": "C-104",
+    "ad_soyad": "Selahattin Uzun"
+  },
+  {
+    "oda_no": "C-105",
+    "ad_soyad": "Abdulkadir Hocaoğlu"
+  },
+  {
+    "oda_no": "C-106",
+    "ad_soyad": "Fazlı Karademir"
+  },
+  {
+    "oda_no": "C-107",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-108",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-109",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-110",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-111",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-112",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-201",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-202",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-203",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-204",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-205",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-206",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-207",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-208",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-209",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-210",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-211",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-212",
+    "ad_soyad": ""
+  },
+  {
+    "oda_no": "C-Z01",
+    "ad_soyad": "Osman Aktepe"
+  },
+  {
+    "oda_no": "C-Z02",
+    "ad_soyad": "Mevlüt Kaplanbaba"
+  },
+  {
+    "oda_no": "C-Z03",
+    "ad_soyad": "Arif Kangör"
+  },
+  {
+    "oda_no": "C-Z04",
+    "ad_soyad": "Mustafa Gökçe"
+  },
+  {
+    "oda_no": "C-Z05",
+    "ad_soyad": "Feyzullah Taşçı"
+  },
+  {
+    "oda_no": "C-Z06",
+    "ad_soyad": "Osman Ceylan"
+  },
+  {
+    "oda_no": "C-Z07",
+    "ad_soyad": "Arif Serdar Dinçer"
+  },
+  {
+    "oda_no": "C-Z08",
+    "ad_soyad": "Hasan Gündüz"
+  },
+  {
+    "oda_no": "C-Z09",
+    "ad_soyad": "Osman Yeşiltaş"
+  },
+  {
+    "oda_no": "C-Z10",
+    "ad_soyad": "Hasan Arzuman"
+  },
+  {
+    "oda_no": "C-Z11",
+    "ad_soyad": "Tuncer Ural"
+  },
+  {
+    "oda_no": "C-Z12",
+    "ad_soyad": ""
+  }
+]

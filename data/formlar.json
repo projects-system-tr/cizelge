@@ -1,0 +1,218 @@
+[
+  {
+    "id": "bakim-kontrol",
+    "ad": "Bakım Kontrol Çizelgesi",
+    "kisa_ad": "Bakım Kontrol",
+    "tip": "grid-gun-sutun",
+
+    "sablon_dosya": "gunluk-takip/data/form.xlsx",
+
+    "madde_sayisi": 13,
+    "madde_baslangic_satiri": 8,
+    "madde_satir_yuksekligi": 2,
+
+    "gun_baslik_satiri": 7,
+    "gun_baslangic_sutunu": 2,
+
+    "baslik_hucresi": "B5",
+    "baslik_sablon": "{AY_BUYUK} {YIL} BAKIM KONTROL ÇİZELGESİ",
+
+    "logo_hucre_araligi": { "tl": { "col": 0, "row": 0 }, "br": { "col": 1, "row": 7 } },
+
+    "sakin_adi_hucresi": "V39",
+
+    "personel_imza_satiri": 35,
+    "personel_imza_font": { "name": "Times New Roman", "size": 8 },
+    "personel_satir_yuksekligi": 34,
+    "ad_soyad_kisaltma_siniri": 7
+  },
+
+  {
+    "id": "banyo-takip",
+    "ad": "Banyo Takip Çizelgesi",
+    "kisa_ad": "Banyo Takip",
+    "tip": "grid-gun-satir",
+
+    "sablon_dosya": "gunluk-takip/data/banyo-takip.xlsx",
+
+    "sakin_adi_hucresi": "C7",
+    "ay_yil_hucresi": "A11",
+    "ay_yil_sablon": "{AY} {YIL}",
+
+    "gun_baslangic_satiri": 13,
+    "gun_sayisi": 31,
+    "tarih_turu": "gun_no",
+    "gun_sutunu": "A",
+
+    "alanlar": [
+      { "id": "saat", "etiket": "Saat", "tip": "saat", "sutun": "B" },
+      { "id": "banyo", "etiket": "Banyo", "tip": "eh", "sutun": "D" },
+      { "id": "vucut_silme", "etiket": "Vücut Silme", "tip": "eh", "sutun": "F" },
+      { "id": "uygulayan", "etiket": "Uygulayan", "tip": "personel", "sutun": "H" }
+    ]
+  },
+
+  {
+    "id": "gunluk-kisisel-bakim",
+    "ad": "Günlük Kişisel Bakım Çizelgesi",
+    "kisa_ad": "Kişisel Bakım",
+    "tip": "grid-gun-satir",
+
+    "sablon_dosya": "gunluk-takip/data/gunluk-kisisel-bakim.xlsx",
+
+    "sakin_adi_hucresi": "C7",
+    "ay_yil_hucresi": "A11",
+    "ay_yil_sablon": "{AY} {YIL}",
+
+    "gun_baslangic_satiri": 13,
+    "gun_sayisi": 31,
+    "tarih_turu": "gun_no",
+    "gun_sutunu": "A",
+
+    "alanlar": [
+      { "id": "saat", "etiket": "Saat", "tip": "saat", "sutun": "B" },
+      { "id": "el_yuz_yikama", "etiket": "El - Yüz Yıkama", "tip": "eh", "sutun": "C" },
+      { "id": "kiyafet_degisimi", "etiket": "Kıyafet Değişimi", "tip": "eh", "sutun": "D" },
+      { "id": "tiras", "etiket": "Tıraş", "tip": "eh", "sutun": "E" },
+      { "id": "tirnak_kesimi", "etiket": "Tırnak Kesimi", "tip": "eh", "sutun": "F" },
+      { "id": "diger", "etiket": "Diğer", "tip": "eh", "sutun": "G" },
+      { "id": "uygulayan", "etiket": "Uygulayan", "tip": "personel", "sutun": "H" }
+    ]
+  },
+
+  {
+    "id": "pozisyon-takip",
+    "ad": "Pozisyon Takip Çizelgesi",
+    "kisa_ad": "Pozisyon Takip",
+    "tip": "grid-gun-satir",
+
+    "sablon_dosya": "gunluk-takip/data/pozisyon-takip.xlsx",
+
+    "sakin_adi_hucresi": "C7",
+    "ay_yil_hucresi": "A10",
+    "ay_yil_sablon": "{AY} {YIL}",
+
+    "gun_baslangic_satiri": 12,
+    "gun_sayisi": 31,
+    "tarih_turu": "gun_no",
+    "gun_sutunu": "A",
+
+    "alanlar": [
+      { "id": "pos_0900", "etiket": "09:00", "tip": "eh-parantez", "sutun": "B" },
+      { "id": "pos_1100", "etiket": "11:00", "tip": "eh-parantez", "sutun": "C" },
+      { "id": "pos_1300", "etiket": "13:00", "tip": "eh-parantez", "sutun": "D" },
+      { "id": "pos_1500", "etiket": "15:00", "tip": "eh-parantez", "sutun": "E" },
+      { "id": "pos_1700", "etiket": "17:00", "tip": "eh-parantez", "sutun": "F" },
+      { "id": "pos_1900", "etiket": "19:00", "tip": "eh-parantez", "sutun": "G" },
+      { "id": "pos_2100", "etiket": "21:00", "tip": "eh-parantez", "sutun": "H" },
+      { "id": "pos_2300", "etiket": "23:00", "tip": "eh-parantez", "sutun": "I" },
+      { "id": "uygulayan", "etiket": "Uygulayan", "tip": "personel", "sutun": "J" }
+    ]
+  },
+
+  {
+    "id": "oda-kontrol",
+    "ad": "Oda Kontrol Formu",
+    "kisa_ad": "Oda Kontrol",
+    "tip": "grid-gun-satir",
+
+    "sablon_dosya": "gunluk-takip/data/oda-kontrol.xlsx",
+
+    "sakin_adi_hucresi": "B5",
+    "sakin_adi_sablon": "YAŞLI ADI SOYADI: {AD_SOYAD}",
+
+    "gun_baslangic_satiri": 8,
+    "gun_sayisi": 31,
+    "tarih_turu": "tarih_degeri",
+    "gun_sutunu": "B",
+
+    "alanlar": [
+      { "id": "s0600", "etiket": "06:00", "tip": "eh", "sutun": "E" },
+      { "id": "s0800", "etiket": "08:00", "tip": "eh", "sutun": "F" },
+      { "id": "s1000", "etiket": "10:00", "tip": "eh", "sutun": "G" },
+      { "id": "s1200", "etiket": "12:00", "tip": "eh", "sutun": "H" },
+      { "id": "s1400", "etiket": "14:00", "tip": "eh", "sutun": "I" },
+      { "id": "s1600", "etiket": "16:00", "tip": "eh", "sutun": "J" },
+      { "id": "s1800", "etiket": "18:00", "tip": "eh", "sutun": "K" },
+      { "id": "s2000", "etiket": "20:00", "tip": "eh", "sutun": "L" },
+      { "id": "s2200", "etiket": "22:00", "tip": "eh", "sutun": "M" },
+      { "id": "s0000", "etiket": "00:00", "tip": "eh", "sutun": "N" },
+      { "id": "s0200", "etiket": "02:00", "tip": "eh", "sutun": "O" },
+      { "id": "s0400", "etiket": "04:00", "tip": "eh", "sutun": "P" }
+    ]
+  },
+
+  {
+    "id": "bez-degisim",
+    "ad": "Çıkan İdrar / Bez Değişim Takip Çizelgesi",
+    "kisa_ad": "Bez Değişim",
+    "tip": "grid-gun-satir",
+
+    "sablon_dosya": "gunluk-takip/data/bez-degisim.xlsx",
+
+    "sakin_adi_hucresi": "A5",
+    "sakin_adi_sablon": "YAŞLI ADI SOYADI: {AD_SOYAD}",
+
+    "gun_baslangic_satiri": 8,
+    "gun_sayisi": 31,
+    "tarih_turu": "tarih_degeri",
+    "gun_sutunu": "A",
+
+    "alanlar": [
+      { "id": "s08", "etiket": "08:00", "tip": "eh", "sutun": "D" },
+      { "id": "s09", "etiket": "09:00", "tip": "eh", "sutun": "E" },
+      { "id": "s10", "etiket": "10:00", "tip": "eh", "sutun": "F" },
+      { "id": "s11", "etiket": "11:00", "tip": "eh", "sutun": "G" },
+      { "id": "s12", "etiket": "12:00", "tip": "eh", "sutun": "H" },
+      { "id": "s13", "etiket": "13:00", "tip": "eh", "sutun": "I" },
+      { "id": "s14", "etiket": "14:00", "tip": "eh", "sutun": "J" },
+      { "id": "s15", "etiket": "15:00", "tip": "eh", "sutun": "K" },
+      { "id": "s16", "etiket": "16:00", "tip": "eh", "sutun": "L" },
+      { "id": "s17", "etiket": "17:00", "tip": "eh", "sutun": "M" },
+      { "id": "s18", "etiket": "18:00", "tip": "eh", "sutun": "N" },
+      { "id": "s19", "etiket": "19:00", "tip": "eh", "sutun": "O" },
+      { "id": "s20", "etiket": "20:00", "tip": "eh", "sutun": "P" },
+      { "id": "s21", "etiket": "21:00", "tip": "eh", "sutun": "Q" },
+      { "id": "s22", "etiket": "22:00", "tip": "eh", "sutun": "R" },
+      { "id": "s23", "etiket": "23:00", "tip": "eh", "sutun": "S" },
+      { "id": "s00", "etiket": "00:00", "tip": "eh", "sutun": "T" },
+      { "id": "s01", "etiket": "01:00", "tip": "eh", "sutun": "U" },
+      { "id": "s02", "etiket": "02:00", "tip": "eh", "sutun": "V" },
+      { "id": "s03", "etiket": "03:00", "tip": "eh", "sutun": "W" },
+      { "id": "s04", "etiket": "04:00", "tip": "eh", "sutun": "X" },
+      { "id": "s05", "etiket": "05:00", "tip": "eh", "sutun": "Y" },
+      { "id": "s06", "etiket": "06:00", "tip": "eh", "sutun": "Z" },
+      { "id": "s07", "etiket": "07:00", "tip": "eh", "sutun": "AA" }
+    ]
+  },
+
+  {
+    "id": "dusme-formu",
+    "ad": "Düşme Takip Formu",
+    "kisa_ad": "Düşme Takip",
+    "tip": "olay-kaydi",
+    "oda_bazli_aktivasyon": false,
+
+    "sablon_dosya": "gunluk-takip/data/dusme-formu.xlsx",
+
+    "olay_baslangic_satiri": 6,
+    "olay_satir_yuksekligi": 3,
+    "maksimum_olay_sayisi": 8,
+
+    "alanlar": [
+      { "id": "tarih", "etiket": "Düşme Tarihi", "tip": "tarih", "sutun": "A" },
+      { "id": "adi_soyadi", "etiket": "Adı Soyadı", "tip": "otomatik-sakin", "sutun": "B" },
+      { "id": "blok_birim", "etiket": "Kaldığı Blok / Birim", "tip": "otomatik-oda", "sutun": "D" },
+      { "id": "saat", "etiket": "Düşme Saati", "tip": "saat", "sutun": "E" },
+      { "id": "yer", "etiket": "Düşme Yeri", "tip": "metin", "sutun": "F" },
+      { "id": "neden", "etiket": "Düşme Nedeni", "tip": "metin", "sutun": "G" },
+      { "id": "kronik_hastalik", "etiket": "Kronik Hastalıkları", "tip": "metin", "sutun": "H" },
+      { "id": "engel_durumu", "etiket": "Engel Durumu", "tip": "metin", "sutun": "I" },
+      { "id": "ilaclar", "etiket": "Kullandığı İlaçlar", "tip": "metin", "sutun": "J" },
+      { "id": "vitaller", "etiket": "Ateş, Nabız, TA, KŞ Sonuçları", "tip": "metin", "sutun": "K" },
+      { "id": "bakim_personeli", "etiket": "Görevli Bakım Personeli", "tip": "personel", "sutun": "L" },
+      { "id": "saglik_personeli", "etiket": "Müdahale Eden Sağlık Personeli", "tip": "metin", "sutun": "M" },
+      { "id": "notlar", "etiket": "Notlar", "tip": "metin", "sutun": "N" }
+    ]
+  }
+]

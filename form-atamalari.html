@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Form Atamaları — Günlük Takip Sistemi</title>
+<link rel="icon" href="assets/favicon-32.png" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="ust-bar">
+    <div class="marka">
+      <img src="assets/logo.png" alt="" />
+      <div>
+        <div class="baslik">Günlük Bakım Takip Sistemi</div>
+        <div class="alt-baslik">Oda — Form atamaları</div>
+      </div>
+    </div>
+    <nav>
+      <a href="odalar.html">Odalar</a>
+      <a href="dusme-takip.html">Düşme Takip</a>
+      <a href="rapor.html">Rapor Al</a>
+      <div class="nav-acilir">
+        <button type="button" class="nav-acilir-buton">Yönetim ▾</button>
+        <div class="nav-acilir-menu">
+          <div class="menu-baslik">Yönetim</div>
+          <a href="form-atamalari.html">Form Atamaları</a>
+          <a href="oda-bilgileri.html">Oda Bilgileri</a>
+          <a href="personel-yonetim.html">Personel Yönetimi</a>
+        </div>
+      </div>
+      <a href="#" id="cikisLink">Çıkış Yap</a>
+    </nav>
+  </div>
+
+  <div class="sayfa">
+    <p style="color:var(--metin-soluk); font-size:13.5px; margin-top:0;">
+      Her oda için hangi form(lar)ın aktif olduğunu buradan işaretleyin. Sakin
+      kaydı olmayan odalarda kutucuklar devre dışıdır. Değişiklikler
+      "Değişiklikleri Kaydet" butonuna basana kadar depoya yazılmaz.
+      <br />
+      <strong>Düşme Takip Formu</strong> bu listede yer almaz — oda
+      aktivasyonundan bağımsız, her zaman <a href="dusme-takip.html">Düşme
+      Takip</a> menüsünden erişilebilir bir sabit özelliktir.
+    </p>
+
+    <div class="arac-satiri" style="justify-content:flex-start; margin-top:0; margin-bottom:16px;">
+      <button class="buton birincil" id="kaydetBtn" disabled>Değişiklikleri Kaydet</button>
+      <span id="durumMetni" style="font-size:13px; color:var(--metin-soluk); align-self:center;"></span>
+    </div>
+
+    <div id="matrisIcerik"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/rooms.js"></script>
+  <script src="js/formlar.js"></script>
+  <script src="js/oda-form-atama.js"></script>
+  <script>
+    document.getElementById("cikisLink").addEventListener("click", (e) => { e.preventDefault(); Auth.logout(); });
+  </script>
+  <script src="js/form-atamalari-page.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

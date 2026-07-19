@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Olay Kaydı</title>
+<link rel="icon" href="assets/favicon-32.png" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="ust-bar">
+    <div class="marka">
+      <img src="assets/logo.png" alt="" />
+      <div>
+        <div class="baslik">Günlük Bakım Takip Sistemi</div>
+        <div class="alt-baslik">Olay kaydı</div>
+      </div>
+    </div>
+    <nav>
+      <span class="rozet">👤 <span id="personelEtiket">—</span></span>
+      <a href="odalar.html">Odalar</a>
+      <a href="dusme-takip.html">Düşme Takip</a>
+      <a id="raporLink" href="#">Rapor Al</a>
+      <div class="nav-acilir">
+        <button type="button" class="nav-acilir-buton">Yönetim ▾</button>
+        <div class="nav-acilir-menu">
+          <div class="menu-baslik">Yönetim</div>
+          <a href="form-atamalari.html">Form Atamaları</a>
+          <a href="oda-bilgileri.html">Oda Bilgileri</a>
+          <a href="personel-yonetim.html">Personel Yönetimi</a>
+        </div>
+      </div>
+      <a href="personel-sec.html?donus=odalar.html">Personel Değiştir</a>
+      <a href="#" id="cikisLink">Çıkış Yap</a>
+    </nav>
+  </div>
+
+  <div class="sayfa" id="anaIcerik">
+    <div class="form-ust">
+      <div>
+        <h1 id="odaNoBaslik">—</h1>
+        <div class="sakin-adi" id="sakinAdiBaslik">—</div>
+        <div class="form-adi-etiket" id="formAdiBaslik">—</div>
+      </div>
+      <div class="ay-secici">
+        <button id="oncekiAy" aria-label="Önceki ay">‹</button>
+        <span class="ay-etiket" id="ayEtiket">—</span>
+        <button id="sonrakiAy" aria-label="Sonraki ay">›</button>
+      </div>
+    </div>
+
+    <div class="arac-satiri" style="justify-content:space-between; margin-top:0; margin-bottom:16px;">
+      <span id="durumMetni" style="font-size:13px; color:var(--metin-soluk); align-self:center;"></span>
+      <button class="buton birincil" id="yeniOlayBtn">+ Yeni Olay Ekle</button>
+    </div>
+
+    <div id="olayFormuAlani"></div>
+    <div id="olayListesi"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/rooms.js"></script>
+  <script src="js/date-utils.js"></script>
+  <script src="js/formlar.js"></script>
+  <script src="js/olay-kaydi-data-store.js"></script>
+  <script>
+    const _sayfaParams = new URLSearchParams(window.location.search);
+    document.getElementById("raporLink").href =
+      "rapor.html?oda=" + encodeURIComponent(_sayfaParams.get("oda") || "") +
+      "&form=" + encodeURIComponent(_sayfaParams.get("form") || "");
+    document.getElementById("cikisLink").addEventListener("click", (e) => { e.preventDefault(); Auth.logout(); });
+  </script>
+  <script src="js/olay-kaydi-page.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
